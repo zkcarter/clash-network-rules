@@ -12,18 +12,18 @@ parsers: # array
   # 建立自己的配置
     yaml:
       prepend-proxy-groups: # 建立策略组
-      - name: 🥷PROXY
+      - name: ⭐PROXY
         type: select
         url: http://www.google.com/generate_204
         interval: 300
         proxies:
          - 🚀URL-TEST
-         - 🎛LOAD-BALANCE
-         - 🕹Fallback
+         - 🪐LOAD-BALANCE
+         - ⛅Fallback
          - 👆SELECT
          - DIRECT
          - 🇭🇰香港
-         - 🐳台湾
+         - TW台湾
          - 🇯🇵日本
          - 🇸🇬新加坡
          - 🇰🇷韩国
@@ -34,12 +34,12 @@ parsers: # array
         type: select
         proxies:
          - 🚀URL-TEST
-         - 🎛LOAD-BALANCE
-         - 🕹Fallback
+         - 🪐LOAD-BALANCE
+         - ⛅Fallback
          - ⏳YouTube-Url-Test
          - DIRECT
          - 🇭🇰香港
-         - 🐳台湾
+         - TW台湾
          - 🇯🇵日本
          - 🇸🇬新加坡
          - 🇰🇷韩国
@@ -53,12 +53,12 @@ parsers: # array
         lazy: true
         tolerance: 100
         
-      - name: 🎛LOAD-BALANCE
+      - name: 🪐LOAD-BALANCE
         type: load-balance
         url: http://www.gstatic.com/generate_204
         interval: 600
 
-      - name: 🕹Fallback
+      - name: ⛅Fallback
         type: fallback
         url: http://www.gstatic.com/generate_204
         interval: 60
@@ -70,13 +70,13 @@ parsers: # array
         type: select
         proxies:
          - 🚀URL-TEST
-         - 🎛LOAD-BALANCE
-         - 🕹Fallback
+         - 🪐LOAD-BALANCE
+         - ⛅Fallback
          - ⏳YouTube-Url-Test
          - 👆SELECT
          - DIRECT
          - 🇭🇰香港
-         - 🐳台湾
+         - TW台湾
          - 🇯🇵日本
          - 🇸🇬新加坡
          - 🇰🇷韩国
@@ -97,12 +97,12 @@ parsers: # array
         type: select
         proxies:
          - 🚀URL-TEST
-         - 🎛LOAD-BALANCE
-         - 🕹Fallback
+         - 🪐LOAD-BALANCE
+         - ⛅Fallback
          - 👆SELECT
          - DIRECT
          - 🇭🇰香港
-         - 🐳台湾
+         - TW台湾
          - 🇯🇵日本
          - 🇸🇬新加坡
          - 🇰🇷韩国
@@ -113,12 +113,12 @@ parsers: # array
         type: select
         proxies:
          - 🚀URL-TEST
-         - 🎛LOAD-BALANCE
-         - 🕹Fallback
+         - 🪐LOAD-BALANCE
+         - ⛅Fallback
          - 👆SELECT
          - DIRECT
          - 🇭🇰香港
-         - 🐳台湾
+         - TW台湾
          - 🇯🇵日本
          - 🇸🇬新加坡
          - 🇰🇷韩国
@@ -129,28 +129,12 @@ parsers: # array
         type: select
         proxies:
          - 🚀URL-TEST
-         - 🎛LOAD-BALANCE
-         - 🕹Fallback
+         - 🪐LOAD-BALANCE
+         - ⛅Fallback
          - 👆SELECT
          - DIRECT
          - 🇭🇰香港
-         - 🐳台湾
-         - 🇯🇵日本
-         - 🇸🇬新加坡
-         - 🇰🇷韩国
-         - 🇺🇸美国
-         - 👨‍🎤其他
-
-      - name: 🛀Bilibiliintl
-        type: select
-        proxies:
-         - 🚀URL-TEST
-         - 🎛LOAD-BALANCE
-         - 🕹Fallback
-         - 👆SELECT
-         - DIRECT
-         - 🇭🇰香港
-         - 🐳台湾
+         - TW台湾
          - 🇯🇵日本
          - 🇸🇬新加坡
          - 🇰🇷韩国
@@ -162,14 +146,14 @@ parsers: # array
         proxies:
             - REJECT
             - DIRECT
-            - 🥷PROXY
+            - ⭐PROXY
                
       - name: 🇭🇰香港
         type: url-test
         url: http://www.google.com/generate_204
         interval: 300
       
-      - name: 🐳台湾
+      - name: TW台湾
         type: url-test
         url: http://www.google.com/generate_204
         interval: 300
@@ -213,11 +197,11 @@ parsers: # array
           
       commands:
         - proxy-groups.(🚀URL-TEST).proxies=[]proxyNames
-        - proxy-groups.(🎛LOAD-BALANCE).proxies=[]proxyNames
-        - proxy-groups.(🕹Fallback).proxies=[]proxyNames
+        - proxy-groups.(🪐LOAD-BALANCE).proxies=[]proxyNames
+        - proxy-groups.(⛅Fallback).proxies=[]proxyNames
         - proxy-groups.(⏳YouTube-Url-Test).proxies=[]proxyNames
         - proxy-groups.🇭🇰香港.proxies=[]proxyNames|港|香港|🇭🇰|HK|Hong Kong # 向指定策略组添加订阅中的节点名，可使用正则过滤
-        - proxy-groups.🐳台湾.proxies=[]proxyNames|台|台湾|新北|彰化|TW|Taiwan
+        - proxy-groups.TW台湾.proxies=[]proxyNames|台|台湾|新北|彰化|TW|Taiwan
         - proxy-groups.🇯🇵日本.proxies=[]proxyNames|日|日本|🇯🇵|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan
         - proxy-groups.🇰🇷韩国.proxies=[]proxyNames|韩|韓|韩国|🇰🇷|KR|Korea|KOR|首尔
         - proxy-groups.🇸🇬新加坡.proxies=[]proxyNames|新加坡|🇸🇬|坡|狮城|SG|Singapore
@@ -227,7 +211,7 @@ parsers: # array
 
        # 为各个策略组添加一个DIRECT，避免机场节点无法匹配上面的正则筛选而导致配置出错。应该有其他办法避免，但是我不会。
         - proxy-groups.🇭🇰香港.proxies.0+REJECT
-        - proxy-groups.🐳台湾.proxies.0+REJECT
+        - proxy-groups.TW台湾.proxies.0+REJECT
         - proxy-groups.🇯🇵日本.proxies.0+REJECT
         - proxy-groups.🇰🇷韩国.proxies.0+REJECT
         - proxy-groups.🇸🇬新加坡.proxies.0+REJECT
@@ -245,13 +229,12 @@ parsers: # array
         
   # 添加规则
       prepend-rules: # 规则由上往下遍历，如上面规则已经命中，则不再往下处理
-        - DOMAIN-SUFFIX,jdev.tw,🥷PROXY
-        - DOMAIN-SUFFIX,omnivore.app,🥷PROXY
+        - DOMAIN-SUFFIX,jdev.tw,⭐PROXY
+        - DOMAIN-SUFFIX,omnivore.app,⭐PROXY
         - RULE-SET,youtube,🎎YouTube
         - RULE-SET,netflix,📽Netflix
         - RULE-SET,openai,🤖OpenAI
         - RULE-SET,bing,🔍Bing
-        - RULE-SET,bilibiliintl,🛀Bilibiliintl
         - RULE-SET,applications,DIRECT
         - DOMAIN,clash.razord.top,DIRECT
         - DOMAIN,yacd.haishan.me,DIRECT
@@ -259,17 +242,17 @@ parsers: # array
         - RULE-SET,reject,🚦AD
         - RULE-SET,icloud,DIRECT #
         - RULE-SET,apple,DIRECT # 这三个为国内可直连地址，如果希望走代理改为🥷PROXY
-        - RULE-SET,google,🥷PROXY # 
-        - RULE-SET,tld-not-cn,🥷PROXY
-        - RULE-SET,gfw,🥷PROXY
-        - RULE-SET,greatfire,🥷PROXY
-        - RULE-SET,telegramcidr,🥷PROXY
+        - RULE-SET,google,⭐PROXY # 
+        - RULE-SET,tld-not-cn,⭐PROXY
+        - RULE-SET,gfw,⭐PROXY
+        - RULE-SET,greatfire,⭐PROXY
+        - RULE-SET,telegramcidr,⭐PROXY
         - RULE-SET,lancidr,DIRECT
         - RULE-SET,cncidr,DIRECT
         - GEOIP,,DIRECT
         - GEOIP,CN,DIRECT
         - RULE-SET,direct,DIRECT
-        - RULE-SET,proxy,🥷PROXY
+        - RULE-SET,proxy,⭐PROXY
         - MATCH,👆SELECT # ⭐️⭐️规则之外的，在这里来修改是白名单模式还是黑名单模式，具体在“👆SELECT”选择代理或直连。
 
       # 添加规则集

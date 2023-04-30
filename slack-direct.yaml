@@ -1,0 +1,13 @@
+payload:
+  - DOMAIN-SUFFIX,slack-core.com,DIRECT
+  - DOMAIN-SUFFIX,slack-edge.com,DIRECT
+  - DOMAIN-SUFFIX,slack-files.com,DIRECT
+  - DOMAIN-SUFFIX,slack-imgs.com,DIRECT
+  - DOMAIN-SUFFIX,slack-msgs.com,DIRECT
+  - DOMAIN-SUFFIX,slack-redir.net,DIRECT
+  - DOMAIN-SUFFIX,slack.com,DIRECT
+  - DOMAIN-SUFFIX,slackb.com,DIRECT
+  - DOMAIN-SUFFIX,slackcertified.com,DIRECT
+  - DOMAIN-SUFFIX,slackdemo.com,DIRECT
+  - DOMAIN-SUFFIX,slacker.com,DIRECT
+  - DOMAIN-SUFFIX,slackhq.com,DIRECT

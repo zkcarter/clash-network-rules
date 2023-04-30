@@ -6,7 +6,6 @@ payload:
   - '+.steam.eca.qtlglb.com'
   - '+.steam.naeu.qtlglb.com'
   - '+.steam.ru.qtlglb.com'
-  - '+.steamcommunity.com'
   - '+.steamcontent.com'
   - '+.steamdb.info'
   - '+.steamdeck.com'
